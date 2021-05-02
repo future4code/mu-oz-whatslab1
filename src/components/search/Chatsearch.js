@@ -1,12 +1,14 @@
 import React from "react";
 import "./Chatsearch.css";
 
-function ChatSearch() {
-  return (
-    <div id="search-container">
-      <input type="text" placeholder="Procurar" />
-    </div>
-  );
+class ChatSearch extends React.Component {
+  render() {
+    return (
+      <div id="search-container">
+        <input type="text" placeholder="Procurar" onChange={e =>  this.props.change(e.target.value)} /> 
+      </div>
+    );
+  }
 }
 
 export default ChatSearch;
