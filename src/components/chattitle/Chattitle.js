@@ -1,15 +1,13 @@
-import React from 'react'
+import React from "react";
 import "./Chattitle.css";
-import daryl from "../../images/profiles/daryl.png";
 
-
-function ChatTitle() {
-    return (
-        <div id="chat-title">
-        <span>Daryl</span>
-        <img src={daryl} alt="Daryl" />
-      </div>
-    )
+function ChatTitle(props) {
+  return (
+    <div id="chat-title">
+      <span>{props.user.nome}</span>
+      <img src={props.user.image} alt={props.user.nome}/>
+    </div>
+  );
 }
 
-export default ChatTitle
+export default ChatTitle;

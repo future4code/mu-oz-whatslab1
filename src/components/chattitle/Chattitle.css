@@ -13,6 +13,7 @@
   
   #chat-title > img {
     cursor: pointer;
-    border-radius: 100%;
+    width: 8%;
+    border-radius: 90%;
     padding: 10px;
   }
