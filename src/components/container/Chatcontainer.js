@@ -13,6 +13,8 @@ class ChatContainer extends React.Component {
   state = {
     users: myUsers,
     userSelected: unknowUser,
+    userTyping: 'me',
+    message: ''
   };
 
   // procura usuario na lista de usuarios estáticos
@@ -38,6 +40,16 @@ class ChatContainer extends React.Component {
     let userSelected = user;
     this.setState({ userSelected });
   };
+  
+  onUserTyping = (user) => {
+    let userTyping = user;
+    this.setState({ userTyping });
+  };
+
+  messageSended = (message) => {
+    this.setState({ message });
+  };
+  
 
   render() {
     return (
@@ -52,10 +64,10 @@ class ChatContainer extends React.Component {
             />
           ))}
         </div>
-        <WhoWrites user={this.state.userSelected} />
+        <WhoWrites user={this.state.userSelected} userTyping={this.onUserTyping}/>
         <ChatTitle user={this.state.userSelected} />
-        <MessageList />
-        <SendInput />
+        <MessageList userTyping={this.state.userTyping} message={this.state.message} />
+        <SendInput message={this.messageSended}/>  
       </div>
     );
   }
