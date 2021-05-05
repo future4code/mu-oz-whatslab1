@@ -1,30 +1,30 @@
-import stacey from "../../images/profiles/stacey.jpeg";
-import daryl from "../../images/profiles/daryl.png";
-import sarah from "../../images/profiles/sarah.jpeg";
-import jacob from "../../images/profiles/jacob.png";
-import john from "../../images/profiles/john.jpeg";
+import bruno from "../../images/profiles/Bruno.png";
+import darvas from "../../images/profiles/Pedro.jpg";
+import maju from "../../images/profiles/Maju.png";
+import leticia from "../../images/profiles/Leticia.jpg";
+import astrobot from "../../images/profiles/Astrobot.png";
 import unknown from "../../images/profiles/unknown.jpg";
 
 export const myUsers = [
     {
-      image: stacey,
-      nome: "Stacey",
+      image: bruno,
+      nome: "Bruno Móvio",
     },
     {
-      image: daryl,
-      nome: "Daryl",
+      image: darvas,
+      nome: "Pedro Darvas",
     },
     {
-      image: sarah,
-      nome: "Sarah",
+      image: maju,
+      nome: "Maju Baraldi",
     },
     {
-      image: jacob,
-      nome: "Jacob",
+      image: leticia,
+      nome: "Letícia Chijo",
     },
     {
-      image: john,
-      nome: "John",
+      image: astrobot,
+      nome: "Astrobot",
     },
     {
       image: unknown,
