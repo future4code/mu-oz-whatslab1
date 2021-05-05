@@ -20,7 +20,6 @@ class SendInput extends React.Component {
     event.preventDefault();
     this.props.message(this.state.value)
     this.setState({value: ''});
-
   }
 
   render() {

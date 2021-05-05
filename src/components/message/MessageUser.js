@@ -1,15 +1,14 @@
 import React from "react";
-import daryl from "../../images/profiles/daryl.png";
 
-function MessageUser() {
+function MessageUser(props) {
   return (
     <div className="message-row other-message">
       <div className="message-content">
-        <img src={daryl} alt="Daryl Duckmanton" />
+        <img src={props.user.image}/>
         <div className="message-text">
-          Sim, eu acho que é o mehlor para nós isso.
+          {props.data.message}
         </div>
-        <div className="message-time">22:46</div>
+        <div className="message-time">{props.data.time}</div>
       </div>
     </div>
   );

@@ -40,17 +40,19 @@ class ChatContainer extends React.Component {
     let userSelected = user;
     this.setState({ userSelected });
   };
+
+  //escolher o usuário que vai enviar a mensagem
   
   onUserTyping = (user) => {
     let userTyping = user;
-    this.setState({ userTyping });
+    this.setState({ userTyping});
+    this.setState({message: ''})
   };
 
-  messageSended = (message) => {
+  onMessageSended = (message) => {
     this.setState({ message });
   };
   
-
   render() {
     return (
       <div id="chat-container">
@@ -66,8 +68,8 @@ class ChatContainer extends React.Component {
         </div>
         <WhoWrites user={this.state.userSelected} userTyping={this.onUserTyping}/>
         <ChatTitle user={this.state.userSelected} />
-        <MessageList userTyping={this.state.userTyping} message={this.state.message} />
-        <SendInput message={this.messageSended}/>  
+        <MessageList userSelected={this.state.userSelected} userTyping={this.state.userTyping} message={this.state.message} />
+        <SendInput message={this.onMessageSended}/>  
       </div>
     );
   }

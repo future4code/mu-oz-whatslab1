@@ -15,9 +15,9 @@
     font-size: 1.4rem;
   }
   
-  #send-input {
+  form {
     display: grid;
-    grid: 51px / 1fr 35px;
+    grid: 73px / 1fr 35px;
     align-content: center;
     align-items: center;
     grid-gap: 15px;
@@ -43,7 +43,7 @@
     cursor: pointer;
   }
   @media (max-width: 376px) {
-    #send-input {
+    form {
       display: grid;
       grid: 51px / 77px 19px;
     }
