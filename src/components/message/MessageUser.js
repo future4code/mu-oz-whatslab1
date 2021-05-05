@@ -4,7 +4,7 @@ function MessageUser(props) {
   return (
     <div className="message-row other-message">
       <div className="message-content">
-        <img src={props.user.image}/>
+        <img src={props.user.image} alt=""/>
         <div className="message-text">
           {props.data.message}
         </div>

@@ -12,31 +12,31 @@ class MessageList extends React.Component {
   render() {
     let message = this.props.message;
     let items = this.state.items;
-    if (message !== "" || items.length > 0) {
+    if (message !== "") {
       items.push({
         message: message,
         userTyping: this.props.userTyping,
         time: Date().split(" ")[4],
       });
-
-      if (items.length > 0) {
-        let messages = items.reverse();
-        return (
-          <div id="chat-message-list">
-            {messages.map((item) => (
-              <>
-                {item.userTyping === "me" ? (
-                  <>
-                    <MyMessage data={item} />
-                  </>
-                ) : (
-                  <MessageUser user={this.props.userSelected} data={item} />
-                )}
-              </>
-            ))}
-          </div>
-        );
-      }
+    }
+    
+    if (items.length > 0) {
+      let messages = items.reverse();
+      return (
+        <div id="chat-message-list">
+          {messages.map((item) => (
+            <>
+              {item.userTyping === "me" ? (
+                <>
+                  <MyMessage data={item} />
+                </>
+              ) : (
+                <MessageUser user={this.props.userSelected} data={item} />
+              )}
+            </>
+          ))}
+        </div>
+      );
     } else {
       return <div id="chat-message-list"></div>;
     }

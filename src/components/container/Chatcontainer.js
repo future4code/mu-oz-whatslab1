@@ -8,6 +8,7 @@ import SendInput from "../sendinput/Sendinput";
 import "./Chatcontainer.css";
 import { myUsers, unknowUser } from "./helpers";
 
+
 class ChatContainer extends React.Component {
 
   state = {
@@ -39,6 +40,7 @@ class ChatContainer extends React.Component {
   onUserSelected = (user) => {
     let userSelected = user;
     this.setState({ userSelected });
+    this.setState({message: ''})
   };
 
   //escolher o usuário que vai enviar a mensagem
