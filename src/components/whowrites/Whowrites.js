@@ -1,19 +1,20 @@
 import React from "react";
 import "./Whowrites.css";
 
-function WhoWrites(props) {
+class WhoWrites extends React.Component {
+  render() {
   return (
     <div id="new-message-container">
-      <div className="message">
-        <input type="radio" id="me" name="gender" value="me" />
+      <div className="message" onChange={e =>  this.props.userTyping(e.target.value)}>
+        <input type="radio" id="me" name="user" value="me"/>
         <label for="me">Eu</label>
-      </div>
-      <div className="message">
-        <input type="radio" id="other" name="gender" value="other"/>
-        <label for="other">{props.user.nome}</label>
+        <input type="radio" id="other" name="user" value="other"/>
+        <label for="other">{this.props.user.nome}</label>
       </div>
     </div>
   );
+}
+
 }
 
 export default WhoWrites;
