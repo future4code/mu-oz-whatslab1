@@ -48,6 +48,7 @@
   padding: 9px 14px;
   font-size: 1.6rem;
   margin-bottom: 5px;
+  cursor: pointer;
 }
 
 .message-text p {
@@ -67,4 +68,88 @@
   color: #111;
   border: 1px solid #ddd;
   border-radius: 14px 14px 14px 0;
+}
+#send-input {
+  background: #ffffff;
+}
+
+#send-input > img {
+  cursor: pointer;
+}
+
+#send-input input {
+  outline: none;
+  padding: 15px;
+  border: 2px solid #ddd;
+  color: #330;
+  border-radius: 6px;
+  font-size: 1.4rem;
+}
+
+form {
+  display: grid;
+  grid: 73px / 1fr 35px;
+  align-content: center;
+  align-items: center;
+  grid-gap: 15px;
+  grid-area: chat-form;
+  border-radius: 0 0 10px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  padding-left: 42px;
+  padding-right: 22px;
+}
+
+#send-input input {
+  outline: none;
+  padding: 15px;
+  border: 2px solid #ddd;
+  color: #330;
+  border-radius: 6px;
+  font-size: 1.4rem;
+}
+
+#send-input button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+@media (max-width: 376px) {
+  form {
+    display: grid;
+    grid: 51px / 77px 19px;
+  }
+  #send-input input {
+    margin-left: -22px;
+  }
+}
+#new-message-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  align-content: center;
+  grid-area: new-message-container;
+  border-top: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 0 0 0 10px;
+  padding: 15px 50px;
+  background: #edededb6;
+}
+
+.message {
+  display: flex;
+  padding: 5px;
+}
+
+.message input {
+  margin-right: 5px;
+}
+
+.message label {
+  padding-right: 20px;
+  font-size: 10px;
+}
+
+@media (max-width: 376px) {
+  #new-message-container {
+    padding: 8px 0px;
+  }
 }
