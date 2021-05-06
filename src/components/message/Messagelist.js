@@ -25,6 +25,7 @@ class MessageList extends React.Component {
       message: this.state.message,
       userTyping: this.state.userSelected,
       time: Date().split(" ")[4],
+      userSelected: this.props.user.nome
     };
 
     this.setState({
@@ -45,6 +46,11 @@ class MessageList extends React.Component {
 
   render() {
     let messages = this.state.messages.reverse();
+    if (messages.length > 1){
+      if (messages[0].userSelected !== this.props.user.nome) {
+        this.setState({messages: []})
+      }
+    }
     return (
       <>
         <div id="chat-message-list">
