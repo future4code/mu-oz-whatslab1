@@ -24,14 +24,15 @@
 )
 - Pasta `public`: Ele contém os arquivos estáticos que nos permitirão montar o aplicativo.
 - Pasta `src` (source): A pasta src é a pasta onde nosso código React está localizado.
-## ⚙️ Explicação da Estructura
-Este desafio consiste em construir uma pequena aplicação, fizemos inspiradas no WhatsApp, por isso a interfaz vai resultar semelhante.
+## ⚙️ Explicação da Estrutura
+Este desafio consiste em construir uma pequena aplicação, fizemos inspiradas no WhatsApp, por isso optamos por uma interface que nos remetesse ao aplicativo em questão.
 
-Contém uma lista de usuários que simulam um contato do WhatsApp e conterão a imagem do perfil e o nome de usuário.
+Contém uma lista de usuários que simulam um contato do WhatsApp e conterão a imagem do perfil e o nome de cada usuário.
 
-O aplicativo tem também em um filtro de busca, que filtra os membros por nome.
+O aplicativo também fornece um filtro de busca, que seleciona os membros por nome.
 
-A ideia é que podamos clicar em cada usuário para simular uma interação entre dois pessoas.
+Para demonstrar a funcionalidade do aplicativo, adicionamos uma região que permite simular a troca de 
+mensagens entre duas pessoas, no caso o usuário e um dos contatos presentes na lista.
 
 
 ## ⚙️ Pasta src ou Source:
@@ -39,32 +40,37 @@ A ideia é que podamos clicar em cada usuário para simular uma interação entr
 - Arquivo Index.js:
 Se abrirmos o arquivo index.js. Vamos analisar o conteúdo do arquivo:
 
-*Linha 1:* importe o módulo React que, como vimos, temos dentro das dependências do arquivo package.json e nos permitirá criar interfaces.
+*Linha 1:* importa o módulo React que, como vimos, está  dentro do arquivo package.json e nos permitirá criar interfaces.
 
-*Linha 2:* importe o módulo React-dom que, como vimos, temos dentro das dependências do arquivo package.json e nos permitirá criar interfaces para o navegador / web.
+*Linha 2:* importa o módulo React-dom que, como vimos, também está dentro do arquivo package.json e nos permitirá criar interfaces para o navegador / web.
 
-*Linha 3:* temos a importação para App que está chamando o arquivo App.js no diretório src.
+*Linha 3:* temos a importação do arquivo index.css.
 
-*Linha 5:* é aquela usada pelo React e aquela que adiciona o código que falta ao documento HTML (a imagem, o parágrafo e o link). O que ReactDOM.render realmente faz (que eu quero pintar, onde eu quero pintá-lo) é adicionar um componente dentro do elemento do elemento com id "root" de index.html usando a instrução JavaScript document.getElementById ("root") .
+*Linha 4:* temos a importação para App que está chamando o arquivo App.js no diretório src.
+
+*Linha 6:* é aquela usada pelo React, que adiciona o código que falta ao documento HTML (a imagem, o parágrafo e o link). O que ReactDOM.render realmente faz (que eu quero pintar, onde eu quero pintá-lo) é adicionar um componente dentro do elemento do elemento com id "root" de index.html usando a instrução JavaScript document.getElementById ("root") .
 
 - Arquivo App.js:
-Se analisarmos o arquivo do App, podemos ver que primeiro que ele resulta o componente pai de todos, onde importamos o React porque ele é o encarregado de desenhar as interfaces.
+O arquivo do App, cuja componente é pai de todos, onde importamos o React, o encarregado de desenhar as interfaces.
 O esqueleto do componente é um componente funcional (chamado App). Dentro dele temos a importação do arquivo ChatContainer que está chamando o arquivo ChatContainer.js no diretório pages do src.
 
 - Pasta components/container:
-Ele vai ser o filho do componente App.js, mas vai ser o pai dos componentes chattile, message, conversation, search, sendinput e whowrites.
+Pasta filho do componente App.js. A componente container será pai dos componentes chattile, message, conversation e search.
 
 - Pasta components / Arquivo chattitle:
-
-- Pasta components / Arquivo message:
-
+Exibe o nome e foto do contato com o qual o usuário está conversando.
 - Pasta components / Arquivo search:
+Permite efetuar a busca na lista de contatos através do nome.
+- Pasta components / Arquivo conversation:
+Exibe nome e foto dos membros da lista de contato.
+- Pasta components / Arquivo message:
+Componente responsável pela troca de mensagens. Abrange três áreas do aplicativo: a área onde selecionamos quem irá enviar a mensagem (apenas para demonstrar a funcionalidade do aplicativo), a área onde digitamos e enviamos a mensagem e a área onde as mensagens trocadas são exibidas.
 
-- Pasta components / Arquivo sendinput:
-
-- Pasta components / Arquivo whowrites:
+-As componetes descritas acima estão indicadas na figura a seguir:
+![](componentes.jpg)
 
 - Pasta images:
+Contém as imagens dos contatos do usuário.
 
 
 ##  Instalação
@@ -96,7 +102,7 @@ npm run start
 
 
 
-P.D. Pode ver um prototipo deste aplicativo no seguinte endereço:
+P.D. Um protótipo deste aplicativo (MVP - Produto Mínimo Viável) pode ser visto no seguinte endereço:
 ![](chat.gif)
 
 
