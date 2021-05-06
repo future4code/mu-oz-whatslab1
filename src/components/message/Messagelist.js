@@ -45,8 +45,8 @@ class MessageList extends React.Component {
   };
 
   render() {
-    let messages = this.state.messages.reverse();
-    if (messages.length > 1){
+    let messages = [...this.state.messages].reverse();
+    if (messages.length > 0){
       if (messages[0].userSelected !== this.props.user.nome) {
         this.setState({messages: []})
       }
