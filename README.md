@@ -1,70 +1,111 @@
-# Getting Started with Create React App
+<h2 align="center">WhatsLab</h2>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<h3 align="center">
+  <img alt="WhatsLab"
+    src="https://github.com/future4code/mu-oz-whatslab1/blob/master/src/images/profiles/Geral.png?raw=true" width="380px"/>
+</h3>
+<hr/>
 
-In the project directory, you can run:
 
-### `npm start`
+## ⚙️ Tecnologias Usadas:
+- CSS3
+- JavaScript 
+- React Js 
+- React Components
+- Styled Components
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## ⚙️ Estrutura do Projeto
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Arquivo `.gitignore`
+- Arquivo `package.json`
+- Arquivo `package-lock.json`
+- Pasta `node_modules`: Armazena os pacotes das dependências que definimos no arquivo package.json. Também deve ser observado que este diretório é definido dentro de .gitignore para que todas as dependências infinitas não sejam carregadas para o repositório Git. Portanto, quem baixar o projeto instalará as dependências [diretamente da web](https://www.npmjs.com/
+)
+- Pasta `public`: Ele contém os arquivos estáticos que nos permitirão montar o aplicativo.
+- Pasta `src` (source): A pasta src é a pasta onde nosso código React está localizado.
+## ⚙️ Explicação da Estrutura
+Este desafio consiste em construir uma pequena aplicação, fizemos inspiradas no WhatsApp, por isso optamos por uma interface que nos remetesse ao aplicativo em questão.
 
-### `npm test`
+Contém uma lista de usuários que simulam um contato do WhatsApp e conterão a imagem do perfil e o nome de cada usuário.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+O aplicativo também fornece um filtro de busca, que seleciona os membros por nome.
 
-### `npm run build`
+Para demonstrar a funcionalidade do aplicativo, adicionamos uma região que permite simular a troca de 
+mensagens entre duas pessoas, no caso o usuário e um dos contatos presentes na lista.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## ⚙️ Pasta src ou Source:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Arquivo Index.js:
+Se abrirmos o arquivo index.js. Vamos analisar o conteúdo do arquivo:
 
-### `npm run eject`
+*Linha 1:* importa o módulo React que, como vimos, está  dentro do arquivo package.json e nos permitirá criar interfaces.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+*Linha 2:* importa o módulo React-dom que, como vimos, também está dentro do arquivo package.json e nos permitirá criar interfaces para o navegador / web.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+*Linha 3:* temos a importação do arquivo index.css.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+*Linha 4:* temos a importação para App que está chamando o arquivo App.js no diretório src.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+*Linha 6:* é aquela usada pelo React, que adiciona o código que falta ao documento HTML (a imagem, o parágrafo e o link). O que ReactDOM.render realmente faz (que eu quero pintar, onde eu quero pintá-lo) é adicionar um componente dentro do elemento do elemento com id "root" de index.html usando a instrução JavaScript document.getElementById ("root") .
 
-## Learn More
+- Arquivo App.js:
+O arquivo do App, cuja componente é pai de todos, onde importamos o React, o encarregado de desenhar as interfaces.
+O esqueleto do componente é um componente funcional (chamado App). Dentro dele temos a importação do arquivo ChatContainer que está chamando o arquivo ChatContainer.js no diretório pages do src.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Pasta components/container:
+Pasta filho do componente App.js. A componente container será pai dos componentes chattile, message, conversation e search.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Pasta components / Arquivo chattitle:
+Exibe o nome e foto do contato com o qual o usuário está conversando.
+- Pasta components / Arquivo search:
+Permite efetuar a busca na lista de contatos através do nome.
+- Pasta components / Arquivo conversation:
+Exibe nome e foto dos membros da lista de contato.
+- Pasta components / Arquivo message:
+Componente responsável pela troca de mensagens. Abrange três áreas do aplicativo: a área onde selecionamos quem irá enviar a mensagem (apenas para demonstrar a funcionalidade do aplicativo), a área onde digitamos e enviamos a mensagem e a área onde as mensagens trocadas são exibidas.
 
-### Code Splitting
+-As componetes descritas acima estão indicadas na figura a seguir:
+![](componentes.jpg)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Pasta images:
+Contém as imagens dos contatos do usuário.
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+##  Instalação
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🏁 Para rodar o projeto:
 
-### Advanced Configuration
+Clone este repositório em sua máquina:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+$ git clone https://github.com/future4code/mu-oz-whatslab1.git
+```
 
-### Deployment
+cd `mu-oz-whatslab1` e rode:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+npm install
+```
 
-### `npm run build` fails to minify
+para iniciar:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm run start
+```
+
+<br/>
+
+##  Conclusão
+
+
+
+P.D. Um protótipo deste aplicativo (MVP - Produto Mínimo Viável) pode ser visto no seguinte endereço:
+![](chat.gif)
+
+
+Atenciosamente,
+
+Gremis Tovar e Jeane Melo
